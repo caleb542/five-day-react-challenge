@@ -141,3 +141,24 @@ Deployed site, measured with PageSpeed Insights: TODO.
 - On Windows, git prints CRLF line-ending warnings. They are harmless.
 - Import paths are case-sensitive on Netlify's Linux build and not on Windows, so a mismatched case in an import works locally and fails in the deploy.
 - Checkbox state is not persisted (see Decisions).
+
+--------------------------
+## Personal Log
+
+
+### About Day 0
+
+Day 0 (the site and the pipeline) was built with an AI assistant's help, as setup and learning work. The challenge's no-assistant rule applies to Days 1 to 5, so Day 0's time is not comparable with the later timed days.
+
+### Timing
+
+| | |
+| --- | --- |
+| Target | 2.5 h (150 min) |
+| Active time at last readout | 315 min 28 s, before the Vite pipeline test and `core: done` |
+| Paused (subtracted) | 565 min 07 s, 542 min 54 s, and 100 min 14 s (1,208 min 15 s in total) |
+| Final core time | TODO: after `core: done` |
+
+The target was missed. About 95 minutes went to building the site, about 137 minutes to the accessibility gate, task list fixes, content trim, and README, and about 83 minutes to GitHub, Netlify, and the pull request preview test (approximate, from commit messages). Gate and README work happened before the delivery steps, so it falls inside the core span.
+
+History is not rewritten. A few commit messages are inconsistent (one lacks the `core:` prefix, one has a stray `~`), and they stay as committed.
