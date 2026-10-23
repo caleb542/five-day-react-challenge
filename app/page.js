@@ -9,6 +9,20 @@ const components = {
       <table className="table table-sm" {...props} />
     </div>
   ),
+  li: ({ node, className, children, ...props }) => 
+    className?.includes("task-list-item") ? (
+      <li className={className} {...props}>
+      <label>{children}</label></li>
+    ) : (
+      <li className={className} {...props}>{children}</li>
+    ),
+    input: ({ node, checked, disabled, ...props }) =>
+  props.type === "checkbox" ? (
+    <input {...props} defaultChecked={checked} />
+  ) : (
+    <input {...props} />
+  ),
+    
 };
 
 export default async function Home() {
