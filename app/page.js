@@ -37,6 +37,7 @@ export default async function Home() {
      <footer className="container py-4 border-top text-center">
        <p className="mb-1"><strong>Five Day React Challenge</strong> -  a case study by Caleb Hamilton.</p>
         <p className="mb-0">Built with Next.js and Bootstrap 5, deployed on Netlify.</p>
+        <a href="https://github.com/caleb542/five-day-react-challenge">Source on GitHub</a>
         © {new Date().getFullYear()} Caleb Hamilton
     </footer>
     </div>
