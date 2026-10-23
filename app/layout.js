@@ -9,10 +9,25 @@ export const metadata = {
   description: "Five React projects in five days, built without a code assistant, timed from the first commit, and checked for accessibility.",
 };
 
+const themeScript = `(function () {
+  var mq = window.matchMedia("(prefers-color-scheme: dark)");
+  function apply() {
+    document.documentElement.setAttribute("data-bs-theme", mq.matches ? "dark" : "light");
+  }
+  apply();
+  mq.addEventListener("change", apply);
+})();`;
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }
+
