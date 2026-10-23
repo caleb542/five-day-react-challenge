@@ -1,1 +1,23 @@
 /* Project overrides. Bootstrap provides the base styles. */
+.skip-to-main{
+  position:absolute;
+  display: inline-block;
+  top:20px;
+  left:20px;
+  translate:0 -120px;
+  color:#121212;
+  transition: .5s;
+  background-color: var(--bs-body-bg);
+  outline-offset: .5rem;
+  
+
+  &:focus-visible  {
+    translate:0 0;
+    text-underline-offset: 2px;;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .skip-to-main {
+    transition: none;
+  }
+}

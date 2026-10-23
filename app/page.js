@@ -16,9 +16,11 @@ export default async function Home() {
   const markdown = await fs.readFile(file, "utf8");
   return (
     <div>
-     <main className="container py-4">
+     <a href="#main" className="skip-to-main">Skip to main content</a>
+     <main id="main" className="container py-4">
      <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>{markdown}</ReactMarkdown>
      </main>
+     <footer></footer>
     </div>
   );
 }
